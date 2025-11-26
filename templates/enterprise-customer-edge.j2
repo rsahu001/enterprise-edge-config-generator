@@ -1,0 +1,13 @@
+!
+hostname {{ customer_name }}-edge-{{ site_id }}
+!
+interface {{ wan_interface }}
+ description Customer WAN - AS{{ asn }} - {{ circuit_id }}
+ ip address {{ wan_ip }}/30
+!
+router bgp {{ customer_asn }}
+ neighbor {{ google_peer_ip }} remote-as 15169
+ neighbor {{ google_peer_ip }} description Google AnyCast Edge
+ address-family ipv4 unicast
+  network {{ customer_prefix }}
+!

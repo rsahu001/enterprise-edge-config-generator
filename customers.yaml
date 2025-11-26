@@ -1,0 +1,9 @@
+- customer_name: "Acme Corp"
+  site_id: "nyc-01"
+  wan_interface: "GigabitEthernet0/1"
+  wan_ip: "203.0.113.1"
+  google_peer_ip: "142.250.190.78"
+  customer_asn: 65001
+  customer_prefix: "192.0.2.0/24"
+  asn: 15169
+  circuit_id: "NYC-WAN-001"
